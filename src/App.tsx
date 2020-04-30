@@ -3,17 +3,24 @@ import Home from '@pages/home/home';
 import getSlotPageRoutingConfig from '@utils/router';
 import React from 'react';
 import { hot } from 'react-hot-loader/root';
-import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom';
+import { Redirect, Route, Switch } from 'react-router-dom';
 
 function App() {
   return (
       <div className={styles.App}>
           <Switch>
-              <Router>
-                  <Route path="/home" component={Home} />
-                  {getSlotPageRoutingConfig()}
-                  <Redirect from="/*" to="/home" />
-              </Router>
+              <Route path="/home" component={Home} />
+              {/*  // 子路由的写法
+              <Route path="/home" 
+                  render={() => (
+                      <>
+                          <Route path="/home/page1" component={Home} />
+                          <Route path="/home/page2" />
+                      </>
+                )} 
+                /> */}
+              {getSlotPageRoutingConfig()}
+              <Redirect from="/*" to="/home" />
               {/* 路由 */}
           </Switch>
       </div>
