@@ -1,0 +1,88 @@
+{
+    //scope": "javascript,javascriptreact,typescript,typescriptreact"
+    "react ts model": {
+      "scope": "typescriptreact,typescript",
+      "prefix": "tsmodel",
+      "body": [
+        "",
+        "export interface ${1:${TM_FILENAME_BASE/(.*)\\.model/${1:/capitalize}/}}Model {",
+        "  [key: string]: any;",
+        "}",
+        "",
+        "export const ${2:${TM_FILENAME_BASE/(.*)\\.model/${1}/}}Model: ${1:${TM_FILENAME_BASE/(.*)\\.model/${1:/capitalize}/}}Model = {",
+        "  $0",
+        "}"
+      ]
+    },
+    "request": {
+      "scope": "typescriptreact",
+      "prefix": "tsreq",
+      "body": [
+        "import { Api } from 'src/constants/Api';",
+        "import request from 'src/utils/request';",
+        "",
+        "export const ${1:functionName} = () =>",
+        "  request<ResponseBody<any>>(Api);"
+      ]
+    },
+    "ts react function component": {
+      "scope": "typescriptreact",
+      "prefix": "tsrfc",
+      "body": [
+        "import React from 'react';",
+        "import styles from './assets/styles/${1:${TM_FILENAME_BASE}}.module.css';",
+        "",
+        "interface ${1:${TM_FILENAME_BASE}}Props {",
+        "  [key: string]: any;",
+        "}",
+        "",
+        "export default function ${1:${TM_FILENAME_BASE}}(props: ${1:${TM_FILENAME_BASE}}Props) {",
+        "  return (",
+        "    <div className={styles.wrap}>",
+        "      ${0}",
+        "    </div>",
+        "  );",
+        "}"
+      ]
+    },
+    "easy-peasy action": {
+      "scope": "typescript,javascript",
+      "prefix": "act",
+      "body": ["action((state, payload) => {", "  ${0}", "}),"]
+    },
+    "easy-peasy thunk": {
+      "scope": "typescript,javascript",
+      "prefix": "thunk",
+      "body": [
+        "thunk(async (actions, payload, { getState }) => {",
+        "  ${0}",
+        "}),"
+      ]
+    },
+    "const {} = useStoreState": {
+      "scope": "typescriptreact",
+      "prefix": "cus",
+      "body": ["const { $0 } = useStoreState(state => state.$1);"]
+    },
+    "const {} = useStoreActions": {
+      "scope": "typescriptreact",
+      "prefix": "cua",
+      "body": ["const { $0 } = useStoreActions(actions => actions.$1);"]
+    },
+    "const {} = object": {
+      "scope": "typescriptreact,typescript,javascript",
+      "prefix": "co",
+      "body": ["const { $0 } = ${1:object};"]
+    },
+    "const [] = array": {
+      "scope": "typescriptreact,typescript,javascript",
+      "prefix": "ca",
+      "body": ["const [ $0 ] = ${1:array};"]
+    },
+    "export inteface": {
+      "scope": "typescriptreact,typescript",
+      "prefix": "ei",
+      "body": ["export interface ${1:App} {", "  $0", "}"]
+    }
+  }
+  

@@ -1,0 +1,40 @@
+{
+  // #每次保存的时候将代码按eslint格式进行修复
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true,
+    "source.organizeImports": true
+  },
+  //  // 点击保存时，根据 eslint 规则自定修复，同时集成 prettier 到 eslint 中
+  "prettier.eslintIntegration": true,
+  // 为了避免和 eslint 冲突，讲编辑器默认的代码检查规则关闭（如果开启了）
+  "editor.formatOnSave": true,
+  "javascript.format.enable": false,
+  "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  // stylelint 扩展自身的校验就够了
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  // 使用本地安装的 TypeScript 替代 VSCode 内置的来提供智能提示
+  "typescript.tsdk": "./node_modules/typescript/lib",
+  // 指定哪些文件不参与搜索
+  "search.exclude": {
+    "**/node_modules": true,
+    "dist": true,
+    "yarn.lock": true
+  },
+  // 指定哪些文件不被 VSCode 监听，预防启动 VSCode 时扫描的文件太多，导致 CPU 占用过高
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/*/**": true,
+    "**/dist/**": true
+  },
+  "eslint.options": {
+    "configFile": "./.eslintrc.js"
+  }
+}

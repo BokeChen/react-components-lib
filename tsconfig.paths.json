@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@src/*": ["src/*"],
+      "@utils/*": ["src/utils/*"],
+      "@assets/*": ["src/pages/*"],
+      "@commom-part/*": ["src/commom-part/*"],
+      "@pages/*": ["src/pages/*"],
+      "@types/*": ["src/types/*"],
+      "@slot-pages/*": ["src/slot-pages/*"]
+    }
+  }
+}
