@@ -13,7 +13,7 @@ module.exports = override(
     '@src': resolve('src'),
     '@utils': resolve('src/utils'),
     '@assets': resolve('src/assets'),
-    '@commom-part': resolve('src/comom-part'),
+    '@common-parts': resolve('src/common-parts'),
     '@pages': resolve('src/pages'),
     '@types': resolve('src/types'),
     '@slot-pages': resolve('src/slot-pages'),

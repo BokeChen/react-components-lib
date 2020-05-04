@@ -5,7 +5,7 @@
       "@src/*": ["src/*"],
       "@utils/*": ["src/utils/*"],
       "@assets/*": ["src/pages/*"],
-      "@commom-part/*": ["src/commom-part/*"],
+      "@common-parts/*": ["src/common-parts/*"],
       "@pages/*": ["src/pages/*"],
       "@types/*": ["src/types/*"],
       "@slot-pages/*": ["src/slot-pages/*"]

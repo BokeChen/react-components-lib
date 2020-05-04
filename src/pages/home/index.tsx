@@ -1,3 +1,4 @@
+import CommonHeader from '@common-parts/header';
 import React, { useReducer } from 'react';
 import styles from './assets/styles/home.module.css';
 
@@ -16,8 +17,11 @@ function reducer(state: { count: number }, action: { type: string; payload?: num
 export default function Home() {
   const [state, dispatch] = useReducer(reducer, initialCount);
   return (
-      <button type="button" className={styles.wrap} onClick={() => dispatch({ type: 'increment' })}>
-          home {state.count}
-      </button>
+      <>
+          <CommonHeader />
+          <button type="button" className={styles.wrap} onClick={() => dispatch({ type: 'increment' })}>
+              home {state.count}
+          </button>
+      </>
   );
 }

@@ -99,7 +99,7 @@ module.exports = {
     'import/no-unresolved': [
       'error',
       {
-        ignore: ['@src', '@utils', '@pages', '@common-part', '@types', '@slot-page', '@assets'],
+        ignore: ['@src', '@utils', '@pages', '@common-parts', '@types', '@slot-page', '@assets'],
       },
     ],
   },
