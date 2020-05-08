@@ -25,7 +25,7 @@ export default function Home() {
           <CommonHeader />
           <Layout style={{ height: 'calc(100vh - 64px)' }}>
               <Row style={{ height: '100%' }}>
-                  <Col span={6}>
+                  <Col span={4}>
                       <div className="logo" />
                       <Menu
                           mode="inline"
@@ -77,7 +77,7 @@ export default function Home() {
                           </SubMenu>
                       </Menu>
                   </Col>
-                  <Col span={18}>
+                  <Col span={20}>
                       <Layout className="site-layout" style={{ marginLeft: 200 }}>
                           <Content style={{ margin: '24px 16px 0', overflow: 'initial' }}>
                               <div
