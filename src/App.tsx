@@ -1,15 +1,15 @@
-import styles from '@assets/styles/App.module.css';
 import Home from '@pages/home';
 import getSlotPageRoutingConfig from '@utils/router';
 import React from 'react';
 import { hot } from 'react-hot-loader/root';
 import { Redirect, Route, Switch } from 'react-router-dom';
+import styles from './App.module.scss';
 
 function App() {
   return (
       <div className={styles.App}>
           <Switch>
-              <Route path="/" component={Home} />
+              <Route path="/" exact component={Home} />
               <Route path="/home" component={Home} />
               {/*  // 子路由的写法
               <Route path="/home" 

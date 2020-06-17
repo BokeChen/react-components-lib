@@ -10,15 +10,13 @@ import './index.css';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-    <React.StrictMode>
-        <Provider store={store}>
-            <ConfigProvider locale={zhCN}>
-                <BrowserRouter>
-                    <App />
-                </BrowserRouter>
-            </ConfigProvider>
-        </Provider>
-    </React.StrictMode>,
+    <Provider store={store}>
+        <ConfigProvider locale={zhCN}>
+            <BrowserRouter>
+                <App />
+            </BrowserRouter>
+        </ConfigProvider>
+    </Provider>,
   document.querySelector('#root'),
 );
 serviceWorker.unregister();

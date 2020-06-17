@@ -1,5 +1,3 @@
-const { resolve } = require;
-
 const OFF = 0;
 const ERROR = 2;
 module.exports = {
@@ -76,16 +74,17 @@ module.exports = {
       },
     ],
     'unicorn/no-process-exit': OFF,
-
+    'unicorn/consistent-function-scoping': OFF,
     '@typescript-eslint/explicit-function-return-type': OFF,
     '@typescript-eslint/no-explicit-any': OFF,
     '@typescript-eslint/no-non-null-assertion': OFF,
     '@typescript-eslint/no-useless-constructor': ERROR,
-
+    '@typescript-eslint/interface-name-prefix': OFF,
     'react/jsx-filename-extension': [ERROR, { extensions: ['.tsx'] }],
     'react/jsx-indent-props': [ERROR, 4],
+    'react/jsx-props-no-spreading': OFF,
     'react/jsx-indent': [ERROR, 4],
-
+    'react/destructuring-assignment': OFF,
     'func-names': OFF,
     'lines-between-class-members': OFF,
     'max-classes-per-file': OFF,
@@ -96,6 +95,10 @@ module.exports = {
     'no-underscore-dangle': OFF,
     'no-unused-expressions': OFF,
     'no-useless-constructor': OFF,
+    'no-shadow': OFF,
+    'jsx-a11y/click-events-have-key-events': OFF,
+    'jsx-a11y/no-noninteractive-element-interactions': OFF,
+    'jsx-a11y/no-static-element-interactions': OFF,
     'import/no-unresolved': [
       'error',
       {

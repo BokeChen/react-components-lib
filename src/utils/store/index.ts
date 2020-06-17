@@ -4,13 +4,6 @@ import { applyMiddleware, combineReducers, createStore, Middleware, Store } from
 import thunk from 'redux-thunk';
 import { rootReducer } from './root-reducer';
 
-// const injectContext = require.context('@slot-pages', true, /inject\.ts/);
-// const importAll:any[] = [];
-// injectContext.keys().forEach((key: string) => {
-//     console.error(injectContext(key));
-//     importAll.push(injectContext(key).default)
-// });
-// console.log('dddddddcontext', importAll[0]);
 const middlewares: Middleware[] = [thunk];
 const history = createBrowserHistory();
 

@@ -1,0 +1,66 @@
+.wrap {
+  margin: 10px 0;
+  color: #8eddff;
+  background-color: transparent;
+  span {
+    display: inline-block;
+    height: 32px;
+    line-height: 32px;
+  }
+  .yellowBar {
+    width: 10px;
+    margin-right: 10px;
+    background: url(./assets/images/headeryellow.png) no-repeat 0 0;
+    background-size: 100% 100%;
+  }
+  .title {
+    font-size: 30px;
+  }
+  .blueBar {
+    position: relative;
+    display: inline-block;
+    width: 308px;
+    margin-left: 10px;
+    padding-bottom: 2px;
+    overflow: hidden;
+    font-size: 12px;
+    background: url(./assets/images/headerbluebar.png) no-repeat 0 100%;
+    b {
+      display: inline-block;
+      width: auto;
+      height: 100%;
+      font-weight: normal;
+      font-size: 12px;
+      transform: scale(0.5);
+      transform-origin: 10px 80%;
+    }
+    .tips {
+      position: absolute;
+      top: 2px;
+      left: 5px;
+      color: #8eddff;
+      font-size: 14px;
+      transform: scale(0.6);
+      transform-origin: 0 0;
+    }
+  }
+
+  .blueBarOne {
+    display: inline-block;
+    width: 308px;
+    margin-left: 10px;
+    padding-bottom: 2px;
+    overflow: hidden;
+    font-size: 12px;
+    b {
+      display: inline-block;
+      width: 150px;
+      height: 100%;
+      margin-top: 5px;
+      font-weight: normal;
+      font-size: 12px;
+      transform: scale(0.5);
+      transform-origin: 10px 100%;
+    }
+  }
+}

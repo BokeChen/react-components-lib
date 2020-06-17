@@ -14,7 +14,14 @@
     "declaration-empty-line-before": null,
     "function-name-case": "lower",
     "no-descending-specificity": null,
-    "no-invalid-double-slash-comments": null
+    "no-invalid-double-slash-comments": null,
+    "value-keyword-case": null,
+    "selector-pseudo-class-no-unknown": [
+      true,
+      {
+        "ignorePseudoClasses": ["global"]
+      }
+    ]
   },
   "ignoreFiles": ["node_modules/**/*", "src/assets/images/*", "dist/**/*", "**/typings/**/*"]
 }

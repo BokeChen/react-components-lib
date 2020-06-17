@@ -3,6 +3,7 @@ import React from 'react';
 import { shallowEqual, useDispatch, useSelector } from 'react-redux';
 
 interface Props {
+  width?: number;
   [propsName: string]: any;
 }
 
@@ -12,11 +13,12 @@ interface StateProps {
   [propsName: string]: any;
 }
 
-const ReduxHooksSample: React.FC<Props> = () => {
+const ReduxHooksSample: React.FC<Props> = (props: Props) => {
+  if (props) {
+  }
   const dispatch = useDispatch();
   const rootDispatcher = new RootDispatcher(dispatch);
   const { counter } = useSelector<StateProps, InitialState>((state: StateProps) => {
-    console.log('dddddddddddddddddstate', state);
     return {
       counter: state.rootReducer.counter,
     };
